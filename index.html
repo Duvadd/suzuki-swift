@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suzuki Swift 1.3 (2000) - Modellek & Kvíz</title>
   
-  <!-- Külön CSS fájl beillesztése -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Csak egyetlen gyökér elem van a HTML-ben, a JS generálja a teljes tartalmat -->
   <div id="app"></div>
 
   <script>
@@ -21,17 +19,16 @@
       const title = document.createElement("h1");
       title.innerText = "🚗 Suzuki Swift 1.3 (2000)";
       
-      const subtitle = document.createElement("p");
-      subtitle.className = "subtitle";
-      subtitle.innerText = "A legenda: Gyári változat, Utcai Tuning, Extreme 4x4 és a Drag Monster";
+      const alcim = document.createElement("p");
+      alcim.className = "subtitle";
+      alcim.innerText = "A legenda: Gyári változat, Utcai Tuning, Extreme 4x4 és a Drag Monster";
 
       app.appendChild(title);
-      app.appendChild(subtitle);
+      app.appendChild(alcim);
 
-      // 1. SZEKCIÓ: GYÁRI
-      const stockSec = document.createElement("div");
-      stockSec.className = "section";
-      stockSec.innerHTML = `
+      const gyari = document.createElement("div");
+      gyari.className = "section";
+      gyari.innerHTML = `
         <h2>⚙️ Gyári 1.3L 16V</h2>
         <ul>
           <li><strong>Teljesítmény:</strong> 85 LE</li>
@@ -41,12 +38,12 @@
           <li><strong>Kipufogó:</strong> Gyári csendes halkan duryogó rendszer</li>
         </ul>
       `;
-      app.appendChild(stockSec);
+      app.appendChild(gyari);
 
       // 2. SZEKCIÓ: UTCAI TUNING
-      const tuningSec = document.createElement("div");
-      tuningSec.className = "section tuning";
-      tuningSec.innerHTML = `
+      const tuning = document.createElement("div");
+      tuning.className = "section tuning";
+      tuning.innerHTML = `
         <h2>🔥 2000-es Évek Utcai Tuning</h2>
         <ul>
           <li><strong>Teljesítmény:</strong> ~100 LE (Direktszűrő + Chip)</li>
@@ -57,12 +54,12 @@
         </ul>
         <img class="section-img" src="https://www.fonixtuning.hu/thumbnails/s/original_suzuki-swift-loekharito-elso-ct02-tuning.jpg" alt="CT02 Tuning Suzuki Swift">
       `;
-      app.appendChild(tuningSec);
+      app.appendChild(tuning);
 
       // 3. SZEKCIÓ: TEREPJÁRÓ (OFF-ROAD)
-      const offroadSec = document.createElement("div");
-      offroadSec.className = "section offroad";
-      offroadSec.innerHTML = `
+      const terep = document.createElement("div");
+      terep.className = "section offroad";
+      terep.innerHTML = `
         <h2>🌲 Extreme 4x4 Off-Road Edition</h2>
         <ul>
           <li><strong>Teljesítmény:</strong> 150 LE (Turbósított motor)</li>
@@ -73,12 +70,11 @@
         </ul>
         <img class="section-img" src="terep.swift.jpg" alt="Terepjáró Suzuki Swift">
       `;
-      app.appendChild(offroadSec);
+      app.appendChild(terep);
 
-      // 4. SZEKCIÓ: DRAG RACE BEAST
-      const dragSec = document.createElement("div");
-      dragSec.className = "section drag";
-      dragSec.innerHTML = `
+      const drag = document.createElement("div");
+      drag.className = "section drag";
+      drag.innerHTML = `
         <h2>🚀 500 km/h in 5 SEC - Drag Race Beast</h2>
         <ul>
           <li><strong>Teljesítmény:</strong> 2500+ LE</li>
@@ -89,12 +85,12 @@
         </ul>
         <img class="section-img" src="dragraceswift.jpg" alt="Drag Race Suzuki Swift">
       `;
-      app.appendChild(dragSec);
+      app.appendChild(drag);
 
       // 5. SZEKCIÓ: MINIKVÍZ
-      const quizSec = document.createElement("div");
-      quizSec.className = "section quiz";
-      quizSec.innerHTML = `
+      const quiz = document.createElement("div");
+      quiz.className = "section quiz";
+      quiz.innerHTML = `
         <h2>❓ Suzuki Swift Minikvíz</h2>
         <div id="quiz-container">
           <p id="quiz-question" class="quiz-question"></p>
@@ -103,9 +99,8 @@
           <button id="quiz-next-btn" class="quiz-next-btn">Következő kérdés ➔</button>
         </div>
       `;
-      app.appendChild(quizSec);
+      app.appendChild(quiz);
 
-      // KVÍZ ADATOK ÉS LOGIKA
       const questions = [
         {
           question: "Hány lóerős a gyári 1.3L 16V Suzuki Swift?",

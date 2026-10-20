@@ -29,7 +29,6 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* Szekciók stílusa */
 .section {
   background: #2f3542;
   padding: 20px;
@@ -87,7 +86,6 @@ li {
   line-height: 1.4;
 }
 
-/* Képek stílusa */
 .section-img {
   width: 100%;
   max-height: 400px;
@@ -97,7 +95,6 @@ li {
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Kvíz stílusai */
 .quiz-question {
   font-size: 18px;
   font-weight: bold;
